@@ -13,5 +13,4 @@ if (-not(Test-Path $outFile)) {
     Invoke-WebRequest $myVersion.uri -OutFile $outFile
 }
 Start-Process -FilePath $outFile -Argument "/VERYSILENT /suppressmsgboxes /MERGETASKS=!runcode" -Wait
-Remove-Item $outFile
 Write-Output 'VSCode Installed'
