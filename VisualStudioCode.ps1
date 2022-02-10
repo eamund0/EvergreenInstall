@@ -1,5 +1,5 @@
 Write-Output 'VSCode Start'
-$BuildDir = 'C:\CustomizerArtifacts'
+$BuildDir = 'C:\buildactions'
 if (-not(Test-Path $BuildDir)){
     New-Item  -ItemType Directory $BuildDir
 }
