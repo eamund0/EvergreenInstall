@@ -14,7 +14,7 @@ $apps = @(
 );
 Foreach ($app in $apps) {
     #check if the app is already installed
-    $listApp = winget list --exact -q $app.name
+    $listApp = winget list --exact -q $app.name --accept-source-agreements
     if (![String]::Join("", $listApp).Contains($app.name)) {
         Write-host "Installing:" $app.name
         if ($app.source -ne $null) {
