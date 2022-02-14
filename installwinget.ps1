@@ -17,3 +17,18 @@ if (!$hasPackageManager -or [version]$hasPackageManager.Version -lt [version]"1.
 else {
     "winget already installed"
 }
+#Configure WinGet
+Write-Output "Configuring winget"
+
+#winget config path from: https://github.com/microsoft/winget-cli/blob/master/doc/Settings.md#file-location
+$settingsPath = "$env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\settings.json";
+$settingsJson = 
+@"
+    {
+        // For documentation on these settings, see: https://aka.ms/winget-settings
+        "experimentalFeatures": {
+          "experimentalMSStore": true,
+        }
+    }
+"@;
+$settingsJson | Out-File $settingsPath -Encoding utf8
