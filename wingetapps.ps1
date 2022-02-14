@@ -2,7 +2,7 @@
 $apps = @(
     @{name = "Microsoft.AzureCLI" }, 
     @{name = "Microsoft.PowerShell" }, 
-    @{name = "Microsoft.WindowsTerminal"; source = "msstore" }, 
+    @{name = "Microsoft.WindowsTerminal"; source = "winget" }, 
     @{name = "Microsoft.AzureStorageExplorer" }, 
     @{name = "Microsoft.PowerToys" },
     @{name = "Google.Chrome" },
