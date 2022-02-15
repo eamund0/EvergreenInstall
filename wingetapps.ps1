@@ -1,4 +1,5 @@
 #Install New apps
+Start-Transcript -Path "C:\buildactions\wingetapps.txt" -NoClobber
 $apps = @(
     @{name = "Microsoft.AzureCLI" }, 
     @{name = "Microsoft.PowerShell" }, 
@@ -28,3 +29,4 @@ Foreach ($app in $apps) {
         Write-host "Skipping Install of " $app.name
     }
 }
+Stop-Transcript
