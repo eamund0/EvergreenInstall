@@ -1,6 +1,6 @@
 #Install WinGet
 #Based on this gist: https://gist.github.com/crutkas/6c2096eae387e544bd05cde246f23901
-Start-Transcript -Path "C:\buildactions\transcript0.txt" -NoClobber
+Start-Transcript -Path "C:\buildactions\wingetinstall.txt" -NoClobber
 
 $hasPackageManager = Get-AppPackage -name 'Microsoft.DesktopAppInstaller'
 if (!$hasPackageManager -or [version]$hasPackageManager.Version -lt [version]"1.10.0.0") {
